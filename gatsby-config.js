@@ -5,6 +5,14 @@ module.exports = {
       siteUrl: `https://www.yourdomain.tld`,
   },
   plugins: [
-
+      {
+          resolve: `gatsby-source-graphql`,
+          options: {
+              fieldName: `cms`,
+              url: `https://countries.trevorblades.com`,
+              typeName: `GraphCMS`,
+              refetchInterval: 60,
+          },
+      },
   ]
 }
