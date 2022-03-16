@@ -21,17 +21,14 @@ export const query = graphql`
 const HomePage = (props: any) => {
     const {
         contentfulLandingPage: {
-            name,
-            seoTitle,
-            seoDescription,
-            widgets,
+            seoTitle
         },
     } = props.data;
 
     return (
         <>
             <div id="top-section">
-                {name}{`  time stamp : ${new Date()}`}
+                {seoTitle}{`  time stamp : ${new Date()}`}
             </div>
         </>
     );
