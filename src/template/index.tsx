@@ -1,4 +1,4 @@
-import * as React from "react"
+import React, { useState, useEffect } from 'react';
 import { useLocation } from "@reach/router"
 
 // styles
@@ -130,7 +130,15 @@ const links = [
 const IndexPage = (props) => {
   const location = useLocation();
   console.log(props);
-  debugger
+  const injectJS = `console.log(123123)`
+
+  useEffect(() => {
+    const scriptTag = document.createElement('script');
+    scriptTag.text = injectJS;
+    document.body.appendChild(scriptTag);
+    console.log('done')
+  },[]);
+
   return (
     <main style={pageStyles}>
       <title>Home Page </title>

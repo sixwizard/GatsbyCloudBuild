@@ -14,5 +14,13 @@ module.exports = {
               refetchInterval: 60,
           },
       },
+      {
+          resolve: `gatsby-source-contentful`,
+          options: {
+              spaceId: `8h0c4zlrto03`,
+              // Learn about environment variables: https://gatsby.dev/env-vars
+              accessToken: `y1UMggjjiQLXt8N9iP5xqZu9BgsHqne4QFjz-etDco8`,
+          },
+      },
   ]
 }
